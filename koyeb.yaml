@@ -1,0 +1,12 @@
+build:
+  dockerfile: Dockerfile
+
+deploy:
+  resources:
+    ports:
+      - protocol: TCP
+        port: 7860
+        path: /
+  env:
+    - key: PORT
+      value: "7860"
